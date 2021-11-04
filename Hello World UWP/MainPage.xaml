@@ -7,10 +7,69 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="42"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontWeight" Value="ExtraBold" />
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
 
-    <Grid>
-        <Button x:Name="FirstButton" Content="Clique aqui" Margin="95,77,0,0" VerticalAlignment="Top" Height="50" Width="123" FontWeight="Bold" FontSize="18" Click="FirstButton_Click"/>
-        <TextBlock x:Name="Hello" HorizontalAlignment="Left" Margin="382,165,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="288" Width="612" FontSize="72" FontWeight="Bold"/>
+        </Style>
+                 
+    </Page.Resources>
+
+
+    <Grid Background="Purple">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+                
+    <Rectangle Fill="White" Margin="5,5,5,5" />
+    <TextBlock x:Name="Um" Foreground="Black" FontWeight="Bold">1</TextBlock>
+        
+    <Rectangle Fill="White" Grid.Column="1" Margin="5,5,5,5" />
+    <TextBlock Grid.Column="1" Foreground="IndianRed">2</TextBlock>
+        
+    <Rectangle Fill="White" Grid.Column="2" Margin="5,5,5,5" />
+    <TextBlock Grid.Column="2" Foreground="CadetBlue">3</TextBlock>
+
+    <Rectangle Fill="White" Grid.Row="1" Grid.Column="0" Margin="5,5,5,5" />
+    <TextBlock Grid.Row="1">4</TextBlock>
+        
+    <Rectangle Fill="White" Grid.Row="1" Grid.Column="1" Margin="5,5,5,5" />
+    <TextBlock Grid.Row="1" Grid.Column="1">5</TextBlock>
+        
+    <Rectangle Fill="White" Grid.Row="1" Grid.Column="2" Margin="5,5,5,5" />
+    <TextBlock Grid.Row="1" Grid.Column="2">6</TextBlock>
+
+    <Rectangle Fill="White" Grid.Row="2" Grid.Column="0" Margin="5,5,5,5" />
+    <TextBlock Grid.Row="2">7</TextBlock>
+        
+    <Rectangle Fill="White" Grid.Row="2" Grid.Column="1" Margin="5,5,5,5" />
+    <TextBlock Grid.Row="2" Grid.Column="1">8</TextBlock>
+        
+    <Rectangle Fill="White" Grid.Row="2" Grid.Column="2" Margin="5,5,5,5" />
+    <TextBlock Grid.Row="2" Grid.Column="2">9</TextBlock>
+        
+    <Button x:Name="FirstButton" Content="Clique aqui" Foreground="GreenYellow" Margin="95,77,0,0" VerticalAlignment="Top" Height="50" Width="123" FontWeight="Bold" FontSize="18" Click="FirstButton_Click" RequestedTheme="Light">
+    <Button.Background>
+        <AcrylicBrush TintColor="Red" />
+    </Button.Background>
+    </Button>
+    <TextBlock x:Name="Hello" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" Margin="20,50,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="288" Width="612" FontSize="64" FontWeight="Bold"/>
+        
+    <Rectangle Fill="Aquamarine" Grid.Column="2" HorizontalAlignment="Right" Height="100" Margin="0,5,50,250" Stroke="Black" VerticalAlignment="Bottom" Width="100" />
+    <Rectangle Fill="PaleVioletRed" Grid.Column="1" Grid.Row="1" Height="200" Width="200" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0, 100, 75 ,0" />
+    <Rectangle Fill="LightGreen" Grid.Row="2" Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="85, 0,0,25"/>
+    
 
     </Grid>
 </Page>
